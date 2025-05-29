@@ -17,7 +17,7 @@ Project Objectives
 
  Dataset, Dashboard & Report Links
 
-*Dashboard (Power BI Online)*: [View Dashboard](https://your-dashboard-link.com)
+*Dashboard (Power BI Online)*: [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTk4NjA4YjAtNjM5MS00NjBmLWJhMjYtYWRkNjNhMGU4YWY2IiwidCI6ImY0MzFkYTgxLWIyYmQtNGRiNC1iNjk3LTNhOTUzYzA5MDk0NSJ9)
 *Full Report (PDF)*: [Download Report](https://your-report-link.com)
 *Dataset (Excel)*: [Download Dataset](https://1drv.ms/x/c/b7bce82d5399b462/EUJ-TEFDbY9EsFYFOb-MSDAB66l4vvOIzsDxWylCDoZOOA)
 
@@ -67,3 +67,86 @@ CALCULATE(COUNT('EMPLOYEE DATSET'[EmployeeID]), 'EMPLOYEE DATSET'[Status] = "On 
 
 LeaveThreshold = 
 CALCULATE(COUNTROWS('EMPLOYEE DATSET'), 'EMPLOYEE DATSET'[LeaveDaysTaken] > 20)
+
+Grievance Status
+
+Open Resolution = 
+CALCULATE(COUNT('EMPLOYEE DATSET'[EmployeeID]), 'EMPLOYEE DATSET'[GrievanceStatus] = "Open")
+
+Pending Resolution = 
+CALCULATE(COUNT('EMPLOYEE DATSET'[EmployeeID]), 'EMPLOYEE DATSET'[GrievanceStatus] = "Pending")
+
+Resolved Employee = 
+CALCULATE(COUNT('EMPLOYEE DATSET'[EmployeeID]), 'EMPLOYEE DATSET'[GrievanceStatus] = "Resolved")
+
+**Tenure, Age, and Date Calculations**
+
+Tenure (days) = 
+IF(ISBLANK([@ExitDate]), TODAY() - [@JoinDate], [@ExitDate] - [@JoinDate])
+
+Avg Tenure = 
+DIVIDE(
+    AVERAGEX(
+        FILTER('EMPLOYEE DATSET', 'EMPLOYEE DATSET'[Status] = "Exited"), 
+        'EMPLOYEE DATSET'[Tenure (Days)]
+    ), 
+    365
+)
+
+DateTable = 
+ADDCOLUMNS(
+    CALENDAR(DATE(2018, 1, 1), DATE(2025, 12, 31)),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month Name", FORMAT([Date], "MMMM"),
+    "Month Short", FORMAT([Date], "MMM"),
+    "Quarter", "Q" & FORMAT([Date], "Q"),
+    "Year-Month", FORMAT([Date], "YYYY-MM")
+)
+
+Groupings
+
+Age Group = 
+IF([@Age] < 30, "20-29", 
+    IF([@Age] < 40, "30-39", 
+        IF([@Age] < 50, "40-49", 
+            IF([@Age] < 60, "50-59", "60+")
+        )
+    )
+)
+
+TENURE = 
+IF([@[Tenure (Days)]] < 365, "<1 year", 
+    IF([@[Tenure (Days)]] < 1095, "1-3 years", 
+        IF([@[Tenure (Days)]] < 1825, "3-5 years", 
+            IF([@[Tenure (Days)]] < 3650, "5-10 years", "10+ years")
+        )
+    )
+)
+
+
+---
+
+Tools Used
+
+Power BI (DAX, visuals, slicers)
+
+Excel (data preparation)
+
+Power Query (data transformation)
+
+GitHub (version control & documentation)
+
+
+About the Analyst
+
+Fidel is a data analyst passionate about turning HR and business data into powerful, actionable insights. This dashboard is part of a broader portfolio showcasing data storytelling and decision support through analytics.
+
+
+
+
+Contact
+
+LinkedIn: https://www.linkedin.com/in/fidelumukoro
+
+Email: Fidelumukoro90@gmail.com
