@@ -123,30 +123,3 @@ IF([@[Tenure (Days)]] < 365, "<1 year",
         )
     )
 )
-
-
----
-
-Tools Used
-
-Power BI (DAX, visuals, slicers)
-
-Excel (data preparation)
-
-Power Query (data transformation)
-
-GitHub (version control & documentation)
-
-
-About the Analyst
-
-Fidel is a data analyst passionate about turning HR and business data into powerful, actionable insights. This dashboard is part of a broader portfolio showcasing data storytelling and decision support through analytics.
-
-
-
-
-Contact
-
-LinkedIn: https://www.linkedin.com/in/fidelumukoro
-
-Email: Fidelumukoro90@gmail.com
