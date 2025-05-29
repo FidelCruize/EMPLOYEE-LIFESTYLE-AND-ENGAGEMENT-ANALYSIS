@@ -123,3 +123,13 @@ IF([@[Tenure (Days)]] < 365, "<1 year",
         )
     )
 )
+
+Tools Used
+
+Power BI (DAX, visuals, slicers)
+
+Excel (data preparation)
+
+Power Query (data transformation)
+
+GitHub (version control & documentation)
