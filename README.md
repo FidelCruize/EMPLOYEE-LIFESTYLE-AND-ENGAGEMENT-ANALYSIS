@@ -1,4 +1,4 @@
-# EMPLOYEE-LIFESTYLE-AND-ENGAGEMENT-ANALYSIS
+# EMPLOYEE LIFESTYLE AND ENGAGEMENT-ANALYSIS
 An interactive HR analytics dashboard built with Power BI and Excel. This project visualizes key HR metrics including employee demographics, engagement, exits, grievances, and benefits to support strategic decision-making. Includes DAX formulas, stakeholder insights, and custom visuals.
 
 HR Analytics Dashboard in Power BI
@@ -18,7 +18,7 @@ Project Objectives
  Dataset, Dashboard & Report Links
 
 *Dashboard (Power BI Online)*: [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTk4NjA4YjAtNjM5MS00NjBmLWJhMjYtYWRkNjNhMGU4YWY2IiwidCI6ImY0MzFkYTgxLWIyYmQtNGRiNC1iNjk3LTNhOTUzYzA5MDk0NSJ9)
-*Full Report (PDF)*: [Download Report](https://us.docworkspace.com/d/sINL4o-g_v6TjwQY?sa=601.1074)
+*Full Report (PDF)*: [Download Report](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy9iN2JjZTgyZDUzOTliNDYyL0VXbjJ0SUUtQW4xSXFpby1PV2pyZkgwQmhmb2lEaWdhVE1hdkU5X2wwOVkwM1E%5FZT0xZFFZQ0E&cid=B7BCE82D5399B462&id=B7BCE82D5399B462%21s81b4f669023e487daa2a3e3968eb7c7d&parId=B7BCE82D5399B462%21sc4aa7b1381b645138b9393832ba50ec8&o=OneUp)
 *Dataset (Excel)*: [Download Dataset](https://1drv.ms/x/c/b7bce82d5399b462/EUJ-TEFDbY9EsFYFOb-MSDAB66l4vvOIzsDxWylCDoZOOA)
 
 
